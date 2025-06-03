@@ -180,3 +180,21 @@ Application bundle generation failed. [0.544 seconds]
          ╵             ~~~~~~~~~~~~~~~~~~~~~
 
 
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.118 seconds]
+
+✘ [ERROR] TS-996008: Component NoteEaseMainComponent is standalone, and cannot be declared in an NgModule. Did you mean to import it instead? [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.module.ts:7:17:
+      7 │   declarations: [NoteEaseMainComponent],
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS-996004: Can't be exported from this NgModule, as it must be imported first [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.module.ts:12:12:
+      12 │   exports: [NoteEaseMainComponent]
+         ╵             ~~~~~~~~~~~~~~~~~~~~~
+
+
