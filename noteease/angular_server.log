@@ -285,3 +285,56 @@ Application bundle generation failed. [0.214 seconds]
         ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.340 seconds]
+
+✘ [ERROR] TS2307: Cannot find module './noteease-main/noteease-main.module' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.component.ts:3:35:
+      3 │ ...{ NoteEaseMainModule } from './noteease-main/noteease-main.module';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./noteease-main/noteease-main.module"
+
+    src/app/app.component.ts:4:35:
+      4 │ ...{ NoteEaseMainModule } from './noteease-main/noteease-main.module';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS-991010: 'imports' must be an array of components, directives, pipes, or NgModules.
+  Value is of type '[RouterOutlet, (not statically analyzable)]'. [plugin angular-compiler]
+
+    src/app/app.component.ts:8:11:
+      8 │   imports: [RouterOutlet, NoteEaseMainModule],
+        ╵            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./noteease-main/noteease-main.module"
+
+    src/app/app.component.ts:4:35:
+      4 │ ...{ NoteEaseMainModule } from './noteease-main/noteease-main.module';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+polyfills.js         | polyfills        |  90.20 kB | 
+main.js              | main             |  24.86 kB | 
+styles.css           | styles           |  95 bytes | 
+
+                     | Initial total    | 115.16 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+polyfills.server.mjs | polyfills.server | 572.91 kB | 
+chunk-G6PMGNUH.mjs   | -                |  25.45 kB | 
+server.mjs           | server           |   1.39 kB | 
+main.server.mjs      | main.server      | 800 bytes | 
+
+Application bundle generation complete. [0.385 seconds]
+

@@ -89,7 +89,7 @@ export class NoteEaseMainComponent {
 
   // PUBLIC_INTERFACE
   deleteNote(note: Note): void {
-    if (window.confirm('Delete this note?')) {
+    if (globalThis.confirm('Delete this note?')) {
       this.notes = this.notes.filter(n => n.id !== note.id);
       if (this.selectedNote && this.selectedNote.id === note.id) {
         this.showEditor = false;
