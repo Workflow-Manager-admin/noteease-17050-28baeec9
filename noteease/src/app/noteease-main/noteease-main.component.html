@@ -1,0 +1,112 @@
+<div class="container">
+  <header class="app-header">
+    <span class="app-logo">📝</span>
+    <span class="app-title">NoteEase</span>
+  </header>
+  <div class="search-bar">
+    <input
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="onSearchChange($event)"
+      type="text"
+      placeholder="Search notes..."
+      aria-label="Search notes"
+    />
+  </div>
+  <div class="notes-list">
+    <div
+      class="note-card"
+      *ngFor="let note of filteredNotes"
+      (click)="openNote(note)"
+      tabindex="0"
+      [attr.aria-label]="note.title + ', ' + note.category"
+    >
+      <div class="note-header">
+        <div class="note-title">{{ note.title || '(No Title)' }}</div>
+        <span
+          class="category-label"
+          [style.background]="categoryColor(note.category)"
+        >
+          {{ note.category }}
+        </span>
+      </div>
+      <div class="note-snippet">{{ snippet(note.content) }}</div>
+      <div class="note-date">{{ note.updatedAt | date: 'short' }}</div>
+      <button
+        class="delete-btn"
+        aria-label="Delete note"
+        (click)="deleteNote(note); $event.stopPropagation();"
+        tabindex="0"
+      >🗑️</button>
+    </div>
+    <div class="no-notes" *ngIf="filteredNotes.length === 0">
+      No notes found.
+    </div>
+  </div>
+
+  <!-- Floating Action Button (FAB) for add -->
+  <button
+    aria-label="Add new note"
+    class="fab"
+    (click)="addNote()"
+    tabindex="0"
+  >+</button>
+
+  <!-- Note Editor Dialog/Modal -->
+  <div
+    *ngIf="showEditor"
+    class="modal-overlay"
+    (click)="cancelEdit()"
+    tabindex="-1"
+  >
+    <div
+      class="modal-content"
+      (click)="$event.stopPropagation()"
+      tabindex="0"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-header">
+        <span>{{ editMode ? 'Edit Note' : 'New Note' }}</span>
+        <button
+          class="close-btn"
+          aria-label="Close editor"
+          (click)="cancelEdit()"
+        >×</button>
+      </div>
+      <div class="modal-body">
+        <label>
+          Title:
+          <input
+            [(ngModel)]="editorNote.title"
+            maxlength="60"
+            autofocus
+            aria-label="Note title"
+          />
+        </label>
+        <label>
+          Category:
+          <select [(ngModel)]="editorNote.category" aria-label="Note category">
+            <option *ngFor="let c of categories" [value]="c">{{ c }}</option>
+          </select>
+        </label>
+        <label>
+          Content:
+          <textarea
+            [(ngModel)]="editorNote.content"
+            rows="6"
+            aria-label="Note content"
+            maxlength="1024"
+          ></textarea>
+        </label>
+      </div>
+      <div class="modal-actions">
+        <button
+          class="save-btn"
+          [disabled]="!editorNote.title.trim()"
+          (click)="saveNote()"
+        >Save</button>
+        <button class="cancel-btn" (click)="cancelEdit()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
