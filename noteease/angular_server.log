@@ -338,3 +338,6 @@ main.server.mjs      | main.server      | 800 bytes |
 
 Application bundle generation complete. [0.385 seconds]
 
+1:05:43 PM [vite] (ssr) ✨ new dependencies optimized: @angular/forms
+1:05:43 PM [vite] (ssr) ✨ optimized dependencies changed. reloading
+Page reload sent to client(s).
