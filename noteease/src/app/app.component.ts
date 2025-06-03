@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NoteEaseMainModule } from './noteease-main/noteease-main.module';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, NoteEaseMainModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

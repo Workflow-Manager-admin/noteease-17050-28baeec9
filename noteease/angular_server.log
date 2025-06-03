@@ -28,3 +28,155 @@ Watch mode enabled. Watching for file changes...
 NOTE: Raw file sizes do not reflect development server per-request transformations.
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.17.0.2:3000/
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.602 seconds]
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.component.html:18:7:
+      18 │       *ngFor="let note of filteredNotes"
+         ╵        ~~~~~
+
+  Error occurs in the template of component NoteEaseMainComponent.
+
+    src/app/noteease-main/noteease-main.component.ts:23:15:
+      23 │   templateUrl: './noteease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.component.html:41:27:
+      41 │     <div class="no-notes" *ngIf="filteredNotes.length === 0">
+         ╵                            ~~~~
+
+  Error occurs in the template of component NoteEaseMainComponent.
+
+    src/app/noteease-main/noteease-main.component.ts:23:15:
+      23 │   templateUrl: './noteease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.component.html:56:5:
+      56 │     *ngIf="showEditor"
+         ╵      ~~~~
+
+  Error occurs in the template of component NoteEaseMainComponent.
+
+    src/app/noteease-main/noteease-main.component.ts:23:15:
+      23 │   templateUrl: './noteease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.component.html:89:21:
+      89 │             <option *ngFor="let c of categories" [value]="c">{{ c ...
+         ╵                      ~~~~~
+
+  Error occurs in the template of component NoteEaseMainComponent.
+
+    src/app/noteease-main/noteease-main.component.ts:23:15:
+      23 │   templateUrl: './noteease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.component.html:8:6:
+      8 │       [(ngModel)]="searchTerm"
+        ╵       ~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component NoteEaseMainComponent.
+
+    src/app/noteease-main/noteease-main.component.ts:23:15:
+      23 │   templateUrl: './noteease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG5: Argument of type 'Event' is not assignable to parameter of type 'string'. [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.component.html:9:38:
+      9 │       (ngModelChange)="onSearchChange($event)"
+        ╵                                       ~~~~~~
+
+  Error occurs in the template of component NoteEaseMainComponent.
+
+    src/app/noteease-main/noteease-main.component.ts:23:15:
+      23 │   templateUrl: './noteease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8004: No pipe found with name 'date'. [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.component.html:33:49:
+      33 │ ... <div class="note-date">{{ note.updatedAt | date: 'short' }}</div>
+         ╵                                                ~~~~
+
+  Error occurs in the template of component NoteEaseMainComponent.
+
+    src/app/noteease-main/noteease-main.component.ts:23:15:
+      23 │   templateUrl: './noteease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.component.html:80:12:
+      80 │             [(ngModel)]="editorNote.title"
+         ╵             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component NoteEaseMainComponent.
+
+    src/app/noteease-main/noteease-main.component.ts:23:15:
+      23 │   templateUrl: './noteease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'select'. [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.component.html:88:18:
+      88 │           <select [(ngModel)]="editorNote.category" aria-label="No...
+         ╵                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component NoteEaseMainComponent.
+
+    src/app/noteease-main/noteease-main.component.ts:23:15:
+      23 │   templateUrl: './noteease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'textarea'. [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.component.html:95:12:
+      95 │             [(ngModel)]="editorNote.content"
+         ╵             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component NoteEaseMainComponent.
+
+    src/app/noteease-main/noteease-main.component.ts:23:15:
+      23 │   templateUrl: './noteease-main.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.544 seconds]
+
+✘ [ERROR] TS-996008: Component NoteEaseMainComponent is standalone, and cannot be declared in an NgModule. Did you mean to import it instead? [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.module.ts:7:17:
+      7 │   declarations: [NoteEaseMainComponent],
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS-996004: Can't be exported from this NgModule, as it must be imported first [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.module.ts:12:12:
+      12 │   exports: [NoteEaseMainComponent]
+         ╵             ~~~~~~~~~~~~~~~~~~~~~
+
+
