@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 // Category colors mapped to color palette (primary, accent, etc.)
 const CATEGORY_COLORS: { [key: string]: string } = {
@@ -20,8 +22,10 @@ interface Note {
 
 @Component({
   selector: 'noteease-main',
+  standalone: true,
   templateUrl: './noteease-main.component.html',
   styleUrls: ['./noteease-main.component.css'],
+  imports: [CommonModule, FormsModule],
 })
 export class NoteEaseMainComponent {
   notes: Note[] = [];
@@ -85,7 +89,7 @@ export class NoteEaseMainComponent {
 
   // PUBLIC_INTERFACE
   deleteNote(note: Note): void {
-    if (confirm('Delete this note?')) {
+    if (window.confirm('Delete this note?')) {
       this.notes = this.notes.filter(n => n.id !== note.id);
       if (this.selectedNote && this.selectedNote.id === note.id) {
         this.showEditor = false;

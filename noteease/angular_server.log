@@ -198,3 +198,90 @@ Application bundle generation failed. [0.118 seconds]
          ╵             ~~~~~~~~~~~~~~~~~~~~~
 
 
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.279 seconds]
+
+✘ [ERROR] TS-996008: Component NoteEaseMainComponent is standalone, and cannot be declared in an NgModule. Did you mean to import it instead? [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.module.ts:7:17:
+      7 │   declarations: [NoteEaseMainComponent],
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS-996004: Can't be exported from this NgModule, as it must be imported first [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.module.ts:12:12:
+      12 │   exports: [NoteEaseMainComponent]
+         ╵             ~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.176 seconds]
+
+✘ [ERROR] TS-996008: Component NoteEaseMainComponent is standalone, and cannot be declared in an NgModule. Did you mean to import it instead? [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.module.ts:7:17:
+      7 │   declarations: [NoteEaseMainComponent],
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS-996004: Can't be exported from this NgModule, as it must be imported first [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.module.ts:12:12:
+      12 │   exports: [NoteEaseMainComponent]
+         ╵             ~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.159 seconds]
+
+✘ [ERROR] TS-996008: Component NoteEaseMainComponent is standalone, and cannot be declared in an NgModule. Did you mean to import it instead? [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.module.ts:7:17:
+      7 │   declarations: [NoteEaseMainComponent],
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS-996004: Can't be exported from this NgModule, as it must be imported first [plugin angular-compiler]
+
+    src/app/noteease-main/noteease-main.module.ts:12:12:
+      12 │   exports: [NoteEaseMainComponent]
+         ╵             ~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.214 seconds]
+
+✘ [ERROR] TS2307: Cannot find module './noteease-main/noteease-main.module' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.component.ts:3:35:
+      3 │ ...{ NoteEaseMainModule } from './noteease-main/noteease-main.module';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./noteease-main/noteease-main.module"
+
+    src/app/app.component.ts:4:35:
+      4 │ ...{ NoteEaseMainModule } from './noteease-main/noteease-main.module';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS-991010: 'imports' must be an array of components, directives, pipes, or NgModules.
+  Value is of type '[RouterOutlet, (not statically analyzable)]'. [plugin angular-compiler]
+
+    src/app/app.component.ts:8:11:
+      8 │   imports: [RouterOutlet, NoteEaseMainModule],
+        ╵            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./noteease-main/noteease-main.module"
+
+    src/app/app.component.ts:4:35:
+      4 │ ...{ NoteEaseMainModule } from './noteease-main/noteease-main.module';
+        ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
